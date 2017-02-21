@@ -171,14 +171,18 @@ Dialog.prototype = {
 			// footer
 			footer = yesBtn === '' && noBtn === '' ? '' :
 				'<div class="easyDialog_footer">' + noBtn + yesBtn + '</div>',
-			
-			dialogTmpl = [
-			'<div class="easyDialog_content">',
-				header,
-				'<div class="easyDialog_text">' + tmpl.content + '</div>',
-				footer,
-			'</div>'
-			].join(''),
+			//icon
+			icon = tmpl.icon ? '<i class="icon icon-dialog-'+tmpl.icon+'"></i>' : 
+				'',
+			//内容
+            text = '<span class="easyDialog_details">'+tmpl.content+'</span>',
+            dialogTmpl = [
+                '<div class="easyDialog_content">',
+                header,
+                '<div class="easyDialog_text">' + icon + text + '</div>',
+                footer,
+                '</div>'
+            ].join(''),
 
 			dialogWrap = doc.getElementById( 'easyDialogWrapper' ),
 			rScript = /<[\/]*script[\s\S]*?>/ig;

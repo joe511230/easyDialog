@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp.spritesmith": "^6.2.1"
+  }
+}
